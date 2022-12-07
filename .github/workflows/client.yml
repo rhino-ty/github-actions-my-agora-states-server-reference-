@@ -18,6 +18,7 @@ jobs:
         working-directory: ./my-agora-states-client
       - name: SHOW AWS CLI VERSION
         env:
+          # 하드코딩 절대 하지말기!! 이렇게 secret 탭에 이름 그대로 넣어주고 거기에 value 넣기
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_EC2_METADATA_DISABLED: true
